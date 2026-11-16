@@ -57,7 +57,11 @@ print("MAE:", mae)
 print("RMSE:", rmse)
 print("R2:", r2)
 
+import os
+import matplotlib
 
+if os.getenv("CI") == "true":
+    matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 # Plot actual test data
